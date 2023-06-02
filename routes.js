@@ -290,4 +290,13 @@ router.post('/aliasdata', async (req, res) => {
     }
 });
 
+
+router.get('/check', async (req, res) => {
+    try {
+        res.json({ message: "hello from check route" });
+    } catch (err) {
+        res.send({ message: "Internal Server Error" });
+    }
+});
+
 module.exports = router
